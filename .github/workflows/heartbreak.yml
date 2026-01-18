@@ -1,0 +1,17 @@
+name: Ouroboros Heartbeat
+
+on:
+  schedule:
+    # Jalan setiap 6 jam (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch: # Biar bisa ditrigger manual dari tab Actions
+
+jobs:
+  ping_evolution:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Evolution Endpoint
+        run: |
+          # Ganti URL di bawah dengan URL Vercel project kamu
+          curl -X GET https://cosxouboros.vercel.app/
+          echo "Evolution signal sent."
