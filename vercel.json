@@ -1,0 +1,14 @@
+{
+  "crons": [
+    {
+      "path": "/api/evolve_trigger",
+      "schedule": "0 1,5,9,13,17 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}
