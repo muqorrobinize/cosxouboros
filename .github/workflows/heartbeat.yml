@@ -13,5 +13,5 @@ jobs:
       - name: Trigger Evolution Endpoint
         run: |
           # Ganti URL di bawah dengan URL Vercel project kamu + endpoint trigger
-          curl -X GET https://cosxouboros.vercel.app/api/index.py
+          curl -X GET https://cosxouboros.vercel.app/api/evolve_trigger
           echo "Evolution signal sent."
