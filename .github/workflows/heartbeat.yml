@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Trigger Evolution Endpoint
         run: |
-          # Ganti URL di bawah dengan URL Vercel project kamu + endpoint trigger
-          curl -X GET https://cosxouboros.vercel.app/api/evolve_trigger
+          # Ditambah flag -v (verbose) untuk melihat HTTP Response Header & Body
+          # Ini akan menampilkan pesan error dari Flask jika ada (misal: Token salah/API Key mati)
+          curl -v https://cosxouboros.vercel.app/api/evolve_trigger
           echo "Evolution signal sent."
